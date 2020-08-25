@@ -1,24 +1,33 @@
 <template>
   <div class='item-list-container'>
     <div class="search">
-    <div class="table">
-        <div class="row">
-            <div class="cell">
-                <input type="text" name="nameText" v-model="nameSearchText" @keyup="checkNameSearch">
-            </div>
-            <div class="cell">
-                <input type="text" name="surNameText" v-model="surNameSearchText" @keyup="checkSurnameSearch">
-            </div>
-            <div class="cell">
-                <select type="text" name="sort" v-model="sortingType" @change="changeSortingType">
+        <div class="name-search">
+            <input 
+                type="text" 
+                name="nameText" 
+                v-model="nameSearchText" 
+                @keyup="checkNameSearch"
+                placeholder="Ad ile Ara">
+        </div>
+        <div class="surname-search">
+            <input 
+                type="text" 
+                name="surNameText" 
+                v-model="surNameSearchText" 
+                @keyup="checkSurnameSearch"
+                placeholder="Soyad ile Ara">
+        </div>
+        <div class="sort"> Sıralama:
+            <select type="text" name="sort" v-model="sortingType" @change="changeSortingType">
+                    <option disabled selected value>Sıralama Seçiniz</option>
                     <option value="nameAsc"> Ad A-Z </option>
                     <option value="nameDesc"> Ad Z-A </option>
                     <option value="surNameAsc"> Soyad A-Z </option>
                     <option value="surNameDesc"> Soyad Z-A </option>
-                </select>
-
-            </div>
+            </select>
         </div>
+    </div>
+    <div class="table">
         <div class="row">
             <div class="cell">
                 Ad
@@ -41,9 +50,7 @@
         >
         </phone-book-list-item>
     </div>
-    </div>
   </div>
-
 </template>
 
 <script>
@@ -103,5 +110,25 @@ export default {
    padding: 3px 10px;
    border: 1px solid #999999;
 }
-
+.search{
+    position:relative;
+    padding: 10px 0;
+    border: 1px solid;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: lightgray
+}
+.search div{
+    display: inline-block;
+    margin-left: 5px
+}
+.search .sort{
+    position: absolute;
+    right:10px;
+    
+}
+.search .sort select {
+    display: inline-block;
+    width: 200px;
+}
 </style>
