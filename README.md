@@ -1,24 +1,7 @@
-# phonebook
+# Piri Case 2
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+1. İsim, Soyisim ve Telefon numarası girişi yapılabilen bir form oluşturulmalı.
+2. Form üzerinden yapılan girişlerin ekleneceği bir liste oluşturulmalıdır.
+3. Form üzerine eklenen elemanlar için düzenleme ve silme işlemi yapılabilmelidir.
+4. Listede kayıtlı olan elemanlar isim ve soyisme göre A-Z veya Z-A Dizilebilmelidir.
+5. Listedeki kayıtlar arasında isim ve soyisme göre arama yapılabilmelidir.
